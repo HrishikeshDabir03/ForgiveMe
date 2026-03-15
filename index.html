@@ -141,7 +141,7 @@ Bite me how much you want. But also kiss me the same amount.
 
 <div class="promise-box">
 
-<h3 class="promise-title">I will not use abusive words</h3><br>
+<h3 class="promise-title">I will not use abusive words</h3>
 <div class="promise-divider"></div>
 
 <p>
@@ -161,7 +161,7 @@ Every day I will try to become better at controlling my anger and choosing love 
 
 <div class="promise-box">
 
-<h3 class="promise-title">Didn't ask about period pain</h3><br>
+<h3 class="promise-title">Not asking about period pain</h3>
 <div class="promise-divider"></div>
 
 <p>
@@ -181,7 +181,7 @@ You should never feel alone when you are in pain, especially when I am right the
 
 <div class="promise-box">
 
-<h3 class="promise-title">Not showing complete trust</h3><br>
+<h3 class="promise-title">Not showing complete trust</h3>
 <div class="promise-divider"></div>
 
 <p>
@@ -287,7 +287,11 @@ const texts=[
 "Just click YES ❤️"
 ]
 
-noBtn.innerText=texts[Math.min(attempts,texts.length-1)]
+if(attempts > 20){
+    noBtn.innerText = "Okay I will go and cry 😭"
+}else{
+    noBtn.innerText = texts[attempts % texts.length]
+}
 
 }
 
@@ -320,10 +324,6 @@ Thank you for forgiving me.
 
 <p style="font-size:24px;margin-top:10px">
 I promise to make you smile every day.
-</p><br>
-
-<p style="font-size:24px;margin-top:10px">
-Show me this screenshot.
 </p>
 
 </div>
